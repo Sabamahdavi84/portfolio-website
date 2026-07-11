@@ -40,7 +40,7 @@ export default function LanguageSwitcher() {
                     text-[11px] font-bold rounded-full transition-colors duration-300
                     ${isFa ? "text-white" : "text-gray-500 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-300"}`}
       >
-        فا
+        FA
       </Link>
     </div>
   );
