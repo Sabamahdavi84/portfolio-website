@@ -4,6 +4,15 @@
       "about": "About",
       "projects": "Projects",
       "experience": "Experience",
-      "contact": "Contact"
-    }
+      "contact": "Contact",
+      "titlemobilenav":"Meno",
+      "downloadbtn":"Download CV"
+    },
+    "LanguageSwitcher":{
+    "fa":"FA",
+    "en":"EN"
+  },
+  "Logo":{
+    "name":"Saba Mahdavi"
+  }
 }

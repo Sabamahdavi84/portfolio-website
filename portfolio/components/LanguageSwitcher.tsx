@@ -1,18 +1,20 @@
 "use client";
 import { useLocale } from "next-intl";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
   const isFa = locale === "fa";
+  const t=useTranslations("LanguageSwitcher")
 
   return (
     <div
       dir="ltr"
-      className="relative flex items-center w-20 h-8 rounded-full p-1
+      className={`relative flex items-center rounded-full p-1
                  bg-purple-50 dark:bg-purple-950/40
                  border border-purple-200 dark:border-purple-500/20
-                 overflow-hidden shrink-0"
+                 overflow-hidden shrink-0 ${locale==='fa'? "w-24 h-8":" w-20 h-8"}`}
     >
       {/* پس‌زمینه‌ی کشویی */}
       <div
@@ -20,7 +22,7 @@ export default function LanguageSwitcher() {
                     bg-gradient-to-r from-violet-600 to-purple-600
                     shadow-md shadow-violet-500/30
                     transition-transform duration-300 ease-in-out
-                    ${isFa ? "translate-x-9" : "translate-x-0"}`}
+                    ${isFa ? "translate-x-12" : "translate-x-0"}`}
       />
 
       {/* گزینه انگلیسی - چپ */}
@@ -30,7 +32,7 @@ export default function LanguageSwitcher() {
                     text-[11px] font-bold rounded-full transition-colors duration-300
                     ${!isFa ? "text-white" : "text-gray-500 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-300"}`}
       >
-        EN
+        {t('en')}
       </Link>
 
       {/* گزینه فارسی - راست */}
@@ -40,7 +42,7 @@ export default function LanguageSwitcher() {
                     text-[11px] font-bold rounded-full transition-colors duration-300
                     ${isFa ? "text-white" : "text-gray-500 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-300"}`}
       >
-        FA
+        {t('fa')}
       </Link>
     </div>
   );

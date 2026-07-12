@@ -9,6 +9,7 @@ import ThemeToggle from "../ThemeToggle";
 import LanguageSwitcher from "../LanguageSwitcher";
 import MobileNav from "./MobileNav";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 const navLinks = [
   { href: "#home", label: "home" },
@@ -21,6 +22,7 @@ const navLinks = [
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [navOpen, setNavOpen] = useState(false);
+    const locale=useLocale();
     const t=useTranslations("Navbar")
 
     useEffect(() => {
@@ -55,7 +57,7 @@ export default function Navbar() {
                         <li key={index}>
                             <Link
                                 href={link.href}
-                                className="px-4 py-2 rounded-full text-sm font-medium text-gray-600 dark:text-gray-300 transition-all duration-300 hover:text-white hover:bg-purple-600 dark:hover:bg-purple-500"
+                                className={`${locale==='fa'? "px-4 py-1 rounded-full" : "px-4 py-2 rounded-full"} text-sm font-medium text-gray-600 dark:text-gray-300 transition-all duration-300 hover:text-white hover:bg-purple-600 dark:hover:bg-purple-500`}
                             >
                                 {t(link.label)}
                             </Link>
@@ -71,8 +73,8 @@ export default function Navbar() {
                             icon={LucideDownload}
                             rounded
                             variant="outline"
-                            text="Download CV"
-                            href="/documents/cv.pdf"
+                            text={t('downloadbtn')}
+                            href="/documents/rezome.pdf"
                             download
                         />
                     </div>
@@ -83,7 +85,7 @@ export default function Navbar() {
                     {/* دکمه باز کردن منوی موبایل */}
                     <button
                         onClick={() => setNavOpen(true)}
-                        className="lg:hidden flex items-center justify-center w-9 h-9 rounded-full bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-500/20 text-purple-600 dark:text-purple-300 transition-colors"
+                        className={`${locale==='fa' ? "lg:hidden ml-4":"lg:hidden mr-4"} flex items-center justify-center w-9 h-9 rounded-full bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-500/20 text-purple-600 dark:text-purple-300 transition-colors`}
                         aria-label="Open menu"
                     >
                         <LucideMenu size={20} />

@@ -4,6 +4,15 @@
     "about": "درباره من",
     "projects": "پروژه‌ها",
     "experience": "تجربه کاری",
-    "contact": "تماس با من"
+    "contact": "تماس با من",
+    "titlemobilenav":"منو",
+    "downloadbtn":"دانلود رزومه"
+  },
+  "LanguageSwitcher":{
+    "fa":"فارسی",
+    "en":"انگلیسی"
+  },
+  "Logo":{
+    "name":"صبا مهدوی"
   }
 }

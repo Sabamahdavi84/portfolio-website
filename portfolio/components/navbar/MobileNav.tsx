@@ -42,7 +42,7 @@ export default function MobileNav({ navOpen, setNavOpen, navLinks }: MobileNavPr
                 {/* header */}
                 <div className="flex items-center justify-between px-5 h-16 border-b border-purple-100 dark:border-purple-500/10">
                     <span className="text-sm font-semibold text-gray-500 dark:text-gray-400">
-                        منو
+                        {t('titlemobilenav')}
                     </span>
                     <button
                         onClick={() => setNavOpen(false)}
@@ -79,8 +79,8 @@ export default function MobileNav({ navOpen, setNavOpen, navLinks }: MobileNavPr
                         icon={LucideDownload}
                         rounded
                         variant="outline"
-                        text="Download CV"
-                        href="/documents/cv.pdf"
+                        text={t('downloadbtn')}
+                        href="/documents/rezome.pdf"
                         download
                         className="!w-full !justify-center"
                     />

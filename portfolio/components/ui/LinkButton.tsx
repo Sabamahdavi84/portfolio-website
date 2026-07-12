@@ -25,7 +25,7 @@ export default function LinkButton({
   const baseStyle = `
     relative inline-flex items-center justify-center gap-2
     overflow-hidden
-    px-6 py-3
+    px-4 py-2
     text-sm
     font-semibold
     ${rounded ? "rounded-full" : "rounded-xl"}

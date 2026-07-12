@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { LucideCodeXml } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Logo() {
+  const t=useTranslations('Logo')
   return (
     <Link href="/" className="flex items-center gap-2 group ml-4 mr-4">
       <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-violet-500/30 bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 text-white shadow-lg shadow-violet-500/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:shadow-violet-500/40">
@@ -10,7 +12,7 @@ export default function Logo() {
       </div>
 
       <p className="hidden sm:block text-lg font-semibold tracking-wide text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 md:text-xl">
-        Saba
+        {t('name')}
       </p>
     </Link>
   );
