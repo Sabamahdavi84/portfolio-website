@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { LucideCodeXml } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function Logo() {
   const t=useTranslations('Logo')
   return (
     <Link href="/" className="flex items-center gap-2 group ml-4 mr-4">
-      <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-violet-500/30 bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 text-white shadow-lg shadow-violet-500/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:shadow-violet-500/40">
+      <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full  bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 text-white shadow-lg shadow-violet-500/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:shadow-violet-500/40">
         <LucideCodeXml className="h-5 w-5" />
+        {/* <Image fill src="/images/logo1.jpg" alt="saba"/> */}
         <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </div>
 
