@@ -14,6 +14,7 @@ import { useLocale } from "next-intl";
 const navLinks = [
   { href: "#home", label: "home" },
   { href: "#about", label: "about" },
+   { href: "#skills", label: "skills" },
   { href: "#projects", label: "projects" },
   { href: "#experience", label: "experience" },
   { href: "#contact", label: "contact" }
@@ -40,6 +41,7 @@ export default function Navbar() {
     }, [navOpen])
 
     return (
+        <>
         <nav
             className={`fixed top-0 left-0 w-full z-30 transition-all duration-300 ${
                 scrolled
@@ -92,9 +94,10 @@ export default function Navbar() {
                     </button>
                 </div>
             </div>
+            </nav>
 
             {/* منوی موبایل (drawer از راست) */}
             <MobileNav navOpen={navOpen} setNavOpen={setNavOpen} navLinks={navLinks} />
-        </nav>
+        </>
     )
 }

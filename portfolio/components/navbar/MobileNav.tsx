@@ -23,7 +23,7 @@ export default function MobileNav({ navOpen, setNavOpen, navLinks }: MobileNavPr
             {/* overlay */}
             <div
                 onClick={() => setNavOpen(false)}
-                className={`fixed inset-0 z-40 lg:hidden bg-purple-950/50 backdrop-blur-sm transition-all duration-500 ${
+                className={`fixed inset-0  z-40 lg:hidden bg-purple-950/50 backdrop-blur-sm transition-all duration-500 ${
                     navOpen ? "opacity-100 visible" : "opacity-0 invisible"
                 }`}
             />

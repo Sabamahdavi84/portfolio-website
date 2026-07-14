@@ -2,6 +2,7 @@
     "Navbar":{
       "home": "Home",
       "about": "About",
+      "skills":"Skills",
       "projects": "Projects",
       "experience": "Experience",
       "contact": "Contact",

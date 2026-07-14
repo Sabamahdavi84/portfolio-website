@@ -17,7 +17,7 @@ export default function About() {
     const t=useTranslations("About")
 
     return (
-        <section id="about" className="relative overflow-hidden py-24">
+        <section id="about" className="relative overflow-hidden py-24 pb-2">
             {/* background glow */}
             <div className={`absolute ${locale === 'fa' ? "left-1/12" : "right-1/3"} top-1/3 -translate-x-1/2 w-96 h-96 rounded-full
             blur-3xl bg-purple-300/40 dark:bg-purple-800/25`} />
