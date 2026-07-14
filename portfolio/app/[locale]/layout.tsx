@@ -33,7 +33,8 @@ const RTL_LOCALES = ["fa", "ar"];
 
 const LOCALE_STRUCTURE: Record<string, string> = {
   // فایل جدید؟ فقط یک خط اضافه کن:
-  navbar:"navbar"
+  navbar:"navbar",
+  hero:"hero"
   // newfile: "folder1/folder2/newfile",
 };
 

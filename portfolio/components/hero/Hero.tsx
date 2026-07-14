@@ -4,13 +4,15 @@ import DotGrid from "./background";
 import { useTheme } from "@/app/theme/ThemeContext";
 import { useLocale } from "next-intl";
 import LinkButton from "../ui/LinkButton";
-import { LucideArrowDown, LucideArrowLeft, LucideArrowRight, LucideMail } from "lucide-react";
+import { LucideArrowDown, LucideArrowLeft, LucideArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 export default function Hero(){
     const { theme } = useTheme();
     const isDark = theme === "dark";
     const locale = useLocale();
+    const t=useTranslations("Hero")
 
     return(
         <section id="home" className="relative min-h-screen overflow-hidden
@@ -38,13 +40,13 @@ export default function Hero(){
             <div className="relative z-10 w-[90%] max-w-3xl mx-auto flex flex-col items-center text-center space-y-6">
 
                 <span className="block text-purple-500 dark:text-purple-400 text-sm tracking-[0.3em] font-medium">
-                     HELLO, I'M
+                     {t('hi')}
                 </span>
 
-                <h1 className="font-serif text-6xl md:text-7xl leading-[1.05] text-gray-800 dark:text-gray-100">
-                     Saba <br />
-                   <span className="bg-gradient-to-r from-purple-600 via-purple-400 to-gray-400 dark:from-purple-500 dark:via-violet-400 dark:to-purple-200 bg-clip-text text-transparent">
-                    Mahdavi
+                <h1 className={`${locale==='fa' ? "font-medium text-4xl" : "font-serif text-6xl md:text-7xl"} leading-[1.05] text-gray-800 dark:text-gray-100`}>
+                     {t('name')} <br />
+                   <span className={`${locale==='fa' ? "text-5xl pt-4 block" : "text-6xl md:text-7xl"} bg-gradient-to-r from-purple-600 via-purple-400 to-gray-400 dark:from-purple-500 dark:via-violet-400 dark:to-purple-200 bg-clip-text text-transparent`}>
+                    {t('lastname')}
                   </span>
                 </h1>
                  {/* stars */}
@@ -79,7 +81,7 @@ export default function Hero(){
 
                  <span className="inline-block px-4 py-1.5 rounded-full
                  text-purple-500 dark:text-purple-400 text-sm border border-purple-700">
-                    Fullstack Developer | Next.js Specialist
+                    {t('title')}
                 </span>
 
                 {/* divider */}
@@ -94,18 +96,20 @@ export default function Hero(){
                 </div>
 
                 <p className="text-gray-500 max-w-lg tracking-wide">
-                    Passionate about building modern, scalable web applications with React, Next.js, Node.js, PostgreSQL, and Prisma, with a strong focus on frontend development.
+                    {t('titr')}<br/>
+                    {t('with')} <strong className="dark:text-gray-300/60 text-gray-600"> {t('titr1')}</strong> <br/>
+                      {t('titr2')}
                 </p>
 
                 <div className="flex items-center justify-center gap-4 pt-2 mb-2">
-                    <LinkButton text="Get in touch" href="#contact" rounded icon={locale === "fa" ? LucideArrowLeft : LucideArrowRight}/>
-                    <LinkButton text="View projects" href="#projects" rounded variant="outline"/>
+                    <LinkButton text={t('textbtn')} href="#contact" rounded icon={locale === "fa" ? LucideArrowLeft : LucideArrowRight}/>
+                    <LinkButton text={t('textbtn1')} href="#projects" rounded variant="outline"/>
                 </div>
                                      {/* social + scroll */}
                     <div className="flex items-center justify-between pt-4 mb-6 max-w-md">
                         <div className="flex items-center gap-5 text-gray-500 dark:text-gray-400">
                              <a href="https://github.com/Sabamahdavi84" className="hover:text-purple-500 transition-colors"><FaGithub size={20} /></a>
-                             <a href="#" className="hover:text-purple-500 transition-colors"><FaLinkedin size={20} /></a>
+                             <a href="https://www.linkedin.com/in/saba-mahdavi84/" className="hover:text-purple-500 transition-colors"><FaLinkedin size={20} /></a>
                            <a href="#" className="hover:text-purple-500 transition-colors"><FaTelegram size={20} /></a>
                          </div>
                        
@@ -113,7 +117,7 @@ export default function Hero(){
             </div>
              {/* scroll indicator */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-                <span className="text-gray-500 dark:text-gray-400 text-xs tracking-[0.3em]">SCROLL</span>
+                <span className="text-gray-500 dark:text-gray-400 text-xs tracking-[0.3em]">{t('scroll')}</span>
                 <LucideArrowDown className="w-4 h-4 text-gray-500 dark:text-gray-400 animate-bounce" />
             </div>
         </section>

@@ -1,0 +1,15 @@
+{
+    "Hero":{
+        "hi":"HELLO, I'M",
+        "name":"Saba",
+        "lastname":"Mahdavi",
+        "title":"Fullstack Developer | Next.js Specialist",
+        "titr":"Passionate about building modern, scalable web applications",
+        "with":"with",
+        "titr1":"React, Next.js, Node.js & PostgreSQL",
+        "titr2":"with a strong focus on frontend development.",
+        "textbtn":"Get in touch",
+        "textbtn1":"View projects",
+        "scroll":"SCROLL"
+    }
+}
