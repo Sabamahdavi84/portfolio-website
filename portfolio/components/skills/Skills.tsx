@@ -1,14 +1,14 @@
 "use client"
 
 import { useTheme } from "@/app/theme/ThemeContext";
-import { useLocale } from "next-intl";
+import { useLocale , useTranslations } from "next-intl";
 import {
     LucideCode2,
     LucideServer,
     LucideWrench,
 } from "lucide-react";
 
-type Skill = { name: string; level: number };
+type Skill = { name: string; level: string };
 
 const skillCategories: {
     icon: typeof LucideCode2;
@@ -19,37 +19,37 @@ const skillCategories: {
     {
         icon: LucideCode2,
         title: "Frontend",
-        description: "Building interfaces & user experiences",
+        description: "description",
         skills: [
-            { name: "HTML & CSS", level: 80 },
-            { name: "JavaScript & TypeScript", level: 80 },
-            { name: "React", level: 80 },
-            { name: "Next.js", level: 90 },
-            { name: "TypeScript", level: 80 },
+            { name: "HTML & CSS", level: "80" },
+            { name: "JavaScript & TypeScript", level: "80" },
+            { name: "React", level: "80" },
+            { name: "Next.js", level: "90" },
+            { name: "TypeScript", level: "80" },
         ],
     },
     {
         icon: LucideServer,
         title: "Backend",
-        description: "APIs, databases & server logic",
+        description: "api",
         skills: [
-            { name: "Node.js", level: 50 },
-            { name: "Express", level: 50 },
-            { name: "PostgreSQL", level: 80 },
-            { name: "Python", level: 80 },
-            { name: "REST APIs", level: 70 },
+            { name: "Node.js", level: "50" },
+            { name: "Express", level: "50" },
+            { name: "PostgreSQL", level: "80" },
+            { name: "Python", level: "80" },
+            { name: "REST APIs", level: "70" },
         ],
     },
     {
         icon: LucideWrench,
-        title: "Tools & Others",
-        description: "Workflow, deployment & extras",
+        title: "tools",
+        description: "description1",
         skills: [
-            { name: "Git / GitHub", level: 100 },
-            { name: "Figma", level: 90 },
-            { name: "Vercel", level: 80 },
-            { name: "Jira", level: 80 },
-            { name: "Azure Devops", level: 80 },
+            { name: "Git / GitHub", level: "100" },
+            { name: "Figma", level: "90" },
+            { name: "Vercel", level: "80"},
+            { name: "Jira", level: "80" },
+            { name: "Azure Devops", level: "80" },
         ],
     },
 ];
@@ -59,6 +59,7 @@ export default function Skills() {
     const { theme } = useTheme();
     const isDark = theme === "dark";
     const locale = useLocale();
+    const t=useTranslations('Skills')
 
     return (
         <section id="skills" className="relative overflow-hidden py-24">
@@ -72,12 +73,12 @@ export default function Skills() {
                 {/* heading */}
                 <div className="text-center space-y-6">
                     <span className="block text-purple-500 dark:text-purple-400 text-sm tracking-[0.3em] font-medium">
-                        MY SKILLS
+                        {t('skill')}
                     </span>
 
-                    <h2 className="font-serif text-4xl md:text-5xl leading-tight text-gray-800 dark:text-gray-100">
-                        Tools I use to bring <br />
-                        <span className="text-purple-500 dark:text-purple-400">ideas to life</span>
+                    <h2 className={`${locale==='fa' ? "font-medium text-4xl" : "font-serif text-4xl md:text-5xl"} leading-tight text-gray-800 dark:text-gray-100`}>
+                        {t('tooling')} <br />
+                        <span className="text-purple-500 dark:text-purple-400 pt-2 block">{t('ideas')}</span>
                     </h2>
 
                     <div className="w-24 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto" />
@@ -100,11 +101,11 @@ export default function Skills() {
                                     <category.icon className="text-purple-600 dark:text-purple-400" size={22} />
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
-                                    {category.title}
+                                    {t(category.title)}
                                 </h3>
                             </div>
                             <p className="text-xs text-gray-500 dark:text-gray-400 mb-6 ms-14">
-                                {category.description}
+                                {t(category.description)}
                             </p>
 
                             {/* skill rows */}
@@ -115,8 +116,8 @@ export default function Skills() {
                                             <span className="text-sm font-medium text-gray-700 dark:text-gray-200">
                                                 {skill.name}
                                             </span>
-                                            <span className="ml-auto text-sm text-purple-500 dark:text-purple-400 font-semibold">
-                                    {skill.level}%
+                                            <span className={`${locale==='fa'? "mr-auto":"ml-auto"} text-sm text-purple-500 dark:text-purple-400 font-semibold`}>
+                                    {t(skill.level)}%
                                 </span>
                                         </div>
 

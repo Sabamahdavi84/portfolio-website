@@ -35,7 +35,8 @@ const LOCALE_STRUCTURE: Record<string, string> = {
   // فایل جدید؟ فقط یک خط اضافه کن:
   navbar:"navbar",
   hero:"hero",
-  about:"about"
+  about:"about",
+  skills:"skills"
   // newfile: "folder1/folder2/newfile",
 };
 
