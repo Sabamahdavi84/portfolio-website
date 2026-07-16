@@ -37,7 +37,8 @@ const LOCALE_STRUCTURE: Record<string, string> = {
   hero:"hero",
   about:"about",
   skills:"skills",
-  projects:"projects"
+  projects:"projects",
+  experience:"experience"
   // newfile: "folder1/folder2/newfile",
 };
 

@@ -1,0 +1,18 @@
+{
+    "Experience":{
+        "title":"My Experience",
+        "titr1":"Experience that",
+        "titr2":"speaks volume",
+        "role1":"Frontend Developer",
+        "company1":"Fanavari Tejarat Samyaran Co. (Iran)",
+        "description1":"Developed responsive web applications, built reusable UI components, integrated APIs, and optimized performance and user experience.",
+        "period1":"10 Dec 2025 - present",
+        "role2":"Backend Developer",
+        "company2":"HotiBot(Team Project)",
+        "period2":"26 Sep 2025 - Nov 2025",
+        "description2":"Developed secure backend APIs for admin and user panels, implementing JWT-based authentication and authorization.",
+        "company3":"GrandDesign(Team Project)",
+        "period3":"Jul 2025 - 22 Sep 2025",
+        "description3":"Developed backend functionality for the product section, implementing APIs, data management, and server-side logic."
+    }
+}
