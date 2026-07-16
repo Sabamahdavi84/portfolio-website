@@ -6,45 +6,45 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "My Portfolio Site",
-    description:"A modern, responsive portfolio website built with Next.js and TypeScript, featuring dark mode, multilingual support, smooth animations, and a clean UI to showcase my projects and skills",
+    title: "titleproject",
+    description:"descproject",
     image: "/images/p1.png",
     tags: ["Next.js", "TypeScript"],
     liveURL: "#",
     githubURL: "https://github.com/Sabamahdavi84/portfolio-website",
   },
   {
-    title: "Shoe Website",
-    description: "A responsive shoe store landing page built with HTML, CSS, and JavaScript, featuring interactive product sections, smooth animations, and a modern shopping-focused design.",
+    title: "titleproject1",
+    description: "descproject1",
     image: "/images/p2.png",
     tags: ["HTML/CSS", "JavaScript"],
     liveURL: "https://shoestore-site.vercel.app/",
     githubURL: "https://github.com/Sabamahdavi84/shoestore_site",
   },
   {
-    title: "Simple Finance Dashboard",
-    description: "A lightweight Streamlit app to visualize and categorize personal finance transactions from a CSV file.",
+    title: "titleproject2",
+    description: "descproject2",
     image: "/images/p3.png",
     tags: ["Python"],
     githubURL: "https://github.com/Sabamahdavi84/simple-finance-dashboard",
   },
   {
-    title: "Weather App",
-    description: "A simple desktop weather application built with Python (Tkinter).It fetches live weather data using wttr.in API, shows temperature, wind speed, pressure, and also displays the local time of the city.",
+    title: "titleproject3",
+    description: "descproject3",
     image: "/images/p4.jpg",
     tags: ["Python"],
     githubURL: "https://github.com/Sabamahdavi84/weather-app",
   },
   {
-    title: "ToDo List CLI",
-    description: "This is a simple command-line ToDo list manager built with Python and PostgreSQL.",
+    title: "titleproject4",
+    description: "descproject4",
     image: "/images/p5.jpg",
     tags: ["Python", "PostgreSQL"],
     githubURL: "https://github.com/Sabamahdavi84/TODOLIST",
   },
   {
-    title: "Barbershop Database",
-    description: "This project involves the design and implementation of a relational database for managing the operations of a barbershop.It organizes information about services, hairdressers, salons, customers, and appointments.",
+    title: "titleproject5",
+    description: "descproject5",
     image: "/images/p6.png",
     tags: ["PostgreSQL"],
     githubURL: "https://github.com/Sabamahdavi84/barbershop-database",
@@ -116,11 +116,11 @@ export default function Project() {
               {/* body */}
               <div className="p-5 space-y-4 flex flex-col flex-1">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {project.title}
+                  {t(project.title)}
                 </h3>
 
                 <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed flex-1">
-                  {project.description}
+                  {t(project.description)}
                 </p>
 
                 <div className="flex flex-wrap gap-2">
@@ -146,7 +146,7 @@ export default function Project() {
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
-                    Live Demo
+                    {t("LiveDemo")}
                   </a>
                  ): null}
                   <a
@@ -154,7 +154,7 @@ export default function Project() {
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors"
                   >
                     <FaGithub className="w-3.5 h-3.5" />
-                    GitHub
+                    {t('Github')}
                   </a>
                 </div>
               </div>

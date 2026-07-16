@@ -2,6 +2,20 @@
     "Projects":{
         "title":"My Projects",
         "things":"Things I've",
-        "Built":"Built"
+        "Built":"Built",
+        "titleproject":"My Portfolio Site",
+        "descproject":"A modern, responsive portfolio website built with Next.js and TypeScript, featuring dark mode, multilingual support, smooth animations, and a clean UI to showcase my projects and skills",
+        "titleproject1":"Shoe Website",
+        "descproject1":"A responsive shoe store landing page built with HTML, CSS, and JavaScript, featuring interactive product sections, smooth animations, and a modern shopping-focused design.",
+        "titleproject2":"Simple Finance Dashboard",
+        "descproject2":"A lightweight Streamlit app to visualize and categorize personal finance transactions from a CSV file.",
+        "titleproject3":"Weather App",
+        "descproject3":"A simple desktop weather application built with Python (Tkinter).It fetches live weather data using wttr.in API, shows temperature, wind speed, pressure, and also displays the local time of the city.",
+        "titleproject4":"ToDo List CLI",
+        "descproject4":"This is a simple command-line ToDo list manager built with Python and PostgreSQL.",
+        "titleproject5":"Barbershop Database",
+        "descproject5":"This project involves the design and implementation of a relational database for managing the operations of a barbershop.It organizes information about services, hairdressers, salons, customers, and appointments.",
+        "LiveDemo":"Live Demo",
+        "Github":"GitHub"
     }
 }
