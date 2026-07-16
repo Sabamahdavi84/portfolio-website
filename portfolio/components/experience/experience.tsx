@@ -10,7 +10,7 @@ const experience = [
     period: "period1",
     description: "description1",
     icon: Building2,
-    technologies: ["Next.js", "TypeScript","React","Figma"],
+    technologies: ["Next.js", "Tailwind css","React","Figma"],
   },
   {
     role: "role2",
@@ -83,7 +83,7 @@ export default function Experience() {
                 {/* content */}
                 <div
                   className={`pl-12 md:pl-0 ${
-                    index % 2 === 0 ? "md:text-right" : "md:col-start-2"
+                    index % 2 === 0 ? `${locale==='fa'?"md:text-right":"md:text-left"}` : "md:col-start-2"
                   }`}
                 >
                   <div
@@ -118,7 +118,7 @@ export default function Experience() {
 
                     <div
                       className={`flex flex-wrap gap-2 mt-4 ${
-                        index % 2 === 0 ? "md:justify-end" : ""
+                        index % 2 === 0 ? "md:justify-start" : ""
                       }`}
                     >
                       {exp.technologies.map((tech, techIndex) => (
