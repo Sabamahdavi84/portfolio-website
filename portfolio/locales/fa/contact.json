@@ -1,0 +1,28 @@
+{
+  "Contact": {
+    "badge": "ارتباط با من",
+    "title1": "جهت ارتباط با من",
+    "title2": "فرم زیر را پر کنید",
+    "formTitle": "ارسال پیام",
+
+    "name": "نام",
+    "namePlaceholder": "نام خود را وارد کنید",
+
+    "email": "ایمیل",
+    "emailPlaceholder": "ایمیل خود را وارد کنید",
+
+    "message": "پیام",
+    "messagePlaceholder": "پیام خود را بنویسید...",
+
+    "send": "ارسال پیام",
+
+    "infoTitle": "اطلاعات تماس",
+
+    "phone": "تلفن",
+    "location": "موقعیت",
+
+    "locationValue": "تهران",
+    "phoneValue": "۰۹۹۰۹۳۳۴۸۹۹",
+    "emailValue": "sabamahdavi8400@gmail.com"
+  }
+}

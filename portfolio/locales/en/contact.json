@@ -1,0 +1,29 @@
+{
+  "Contact": {
+    "badge": "Contact",
+    "title1": "Let's build",
+    "title2": "something great",
+    "formTitle": "Send a message",
+
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+
+    "message": "Message",
+    "messagePlaceholder": "Enter your message...",
+
+    "send": "Send Message",
+
+    "infoTitle": "Contact Information",
+
+    "phone": "Phone",
+    "location": "Location",
+
+
+    "locationValue": "Tehran",
+    "phoneValue":"09909334899",
+    "emailValue":"sabamahdavi8400@gmail.com"
+  }
+}
