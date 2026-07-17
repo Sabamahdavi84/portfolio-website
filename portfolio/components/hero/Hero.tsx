@@ -110,7 +110,7 @@ export default function Hero(){
                         <div className="flex items-center gap-5 text-gray-500 dark:text-gray-400">
                              <a href="https://github.com/Sabamahdavi84" className="hover:text-purple-500 transition-colors"><FaGithub size={20} /></a>
                              <a href="https://www.linkedin.com/in/saba-mahdavi84/" className="hover:text-purple-500 transition-colors"><FaLinkedin size={20} /></a>
-                           <a href="#" className="hover:text-purple-500 transition-colors"><FaTelegram size={20} /></a>
+                           <a href="https://t.me/sbaFullStackDev" className="hover:text-purple-500 transition-colors"><FaTelegram size={20} /></a>
                          </div>
                        
                      </div>
