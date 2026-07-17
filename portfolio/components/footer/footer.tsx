@@ -1,14 +1,64 @@
 "use client"
 import { useLocale , useTranslations } from "next-intl"
 import Logo from "../navbar/Logo"
-import { FaGithub, FaTelegram, FaLinkedin } from "react-icons/fa"
+import { FaGithub, FaTelegram, FaLinkedin } from "react-icons/fa";
+import { useState ,useEffect } from "react";
 
 export default function Footer() {
   const locale = useLocale()
+  const [isVisible, setIsVisible] = useState(false);
   const t=useTranslations("Footer")
   const year = new Date().getFullYear()
 
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 700) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // اسکرول به بالا
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
+
   return (
+    <>
+     {/* دکمه بازگشت به بالا */}
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 left-8 z-50 bg-purple-400 hover:bg-purple-500 text-white p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none"
+          aria-label="بازگشت به بالا"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4.5 15.75l7.5-7.5 7.5 7.5"
+            />
+          </svg>
+        </button>
+      )}
+      
     <footer className="relative border-t border-gray-200 dark:border-gray-800 bg-purple-100/50 dark:bg-purple-900/30 overflow-hidden">
       {/* background glow */}
       <div
@@ -86,5 +136,6 @@ export default function Footer() {
         </p>
       </div>
     </footer>
+    </>
   )
 }
