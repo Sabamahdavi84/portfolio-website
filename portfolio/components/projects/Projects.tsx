@@ -16,7 +16,7 @@ const projects = [
   {
     title: "titleproject1",
     description: "descproject1",
-    image: "/images/p2.png",
+    image: "/images/p2+.png",
     tags: ["HTML/CSS", "JavaScript"],
     liveURL: "https://shoestore-site.vercel.app/",
     githubURL: "https://github.com/Sabamahdavi84/shoestore_site",
