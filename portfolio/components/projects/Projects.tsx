@@ -109,7 +109,7 @@ export default function Project() {
         <button
              key={item.key}
              onClick={() => setFilter(item.key as any)}
-             className={`px-5 py-2 rounded-full transition-all
+             className={`px-2 md:px-5 py-2 rounded-full transition-all
             ${
               filter === item.key
                ? "bg-purple-600 text-white"
