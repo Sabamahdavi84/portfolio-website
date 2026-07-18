@@ -72,7 +72,7 @@ export default function Skills() {
             <div className="relative z-10 w-[90%] max-w-6xl mx-auto space-y-6">
 
                 {/* heading */}
-                <div className="text-center space-y-6">
+                <div data-aos="fade-up" className="text-center space-y-6">
                     <span className="block text-purple-500 dark:text-purple-400 text-sm tracking-[0.3em] font-medium">
                         {t('skill')}
                     </span>
@@ -89,6 +89,9 @@ export default function Skills() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-10">
                     {skillCategories.map((category, i) => (
                         <div
+                           data-aos="zoom-in-up"
+                           data-aos-delay={i * 100}
+                           data-aos-duration="700"
                             key={i}
                             className="p-6 rounded-2xl bg-purple-100/40 dark:bg-purple-900/10
                             border border-purple-200/50 dark:border-purple-700/30

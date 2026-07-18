@@ -35,7 +35,7 @@ export default function Experience() {
   const t=useTranslations('Experience')
 
   return (
-    <section id="experience" className="py-32 relative -mt-24 overflow-hidden">
+    <section id="experience" className="py-32 relative -mt-30 overflow-hidden">
       {/* background glow */}
       <div
         className={`absolute ${
@@ -45,7 +45,7 @@ export default function Experience() {
 
       <div className="relative z-10">
         {/* heading */}
-        <div className="text-center space-y-6">
+        <div data-aos="fade-up" className="text-center space-y-6">
           <span className="block text-purple-600 dark:text-purple-400 text-sm tracking-[0.3em] font-medium uppercase">
             {t('title')}
           </span>
@@ -65,24 +65,27 @@ export default function Experience() {
         {/* timeline */}
         <div className="relative mt-14 max-w-5xl mx-auto px-6">
           <div
-            className="absolute left-11 md:left-1/2 top-0 bottom-0 w-0.5
-            bg-gradient-to-b from-purple-400 via-purple-300 to-transparent md:-translate-x-1/2"
+            className={`absolute top-0 bottom-0 w-0.5 ${locale==="fa" ?"md:right-1/2 right-11 ":"md:left-1/2 left-11"}
+            bg-gradient-to-b from-purple-400 via-purple-300 to-transparent md:-translate-x-1/2`}
           />
 
           <div className="space-y-12">
             {experience.map((exp, index) => (
-              <div key={index} className="relative grid md:grid-cols-2 gap-8">
+              <div 
+               data-aos="flip-right"
+               data-aos-anchor-placement="top-bottom"
+               key={index} className="relative grid md:grid-cols-2 gap-8">
                 {/* dot */}
                 <div
-                  className="absolute left-5 md:left-1/2 top-0 w-3 h-3 bg-purple-500 rounded-full
-                  -translate-x-1/2 ring-4 ring-purple-200 dark:ring-purple-900 z-10"
+                  className={`absolute ${locale==="fa" ? "right-2 md:right-1/2 ":"left-5 md:left-1/2"}  top-0 w-3 h-3 bg-purple-500 rounded-full
+                  -translate-x-1/2 ring-4 ring-purple-200 dark:ring-purple-900 z-10`}
                 >
                   <span className="absolute inset-0 rounded-full bg-purple-400 animate-ping opacity-75" />
                 </div>
 
                 {/* content */}
                 <div
-                  className={`pl-12 md:pl-0 ${
+                  className={`${locale === "fa" ? "pr-9 md:pr-0" : "pl-12 md:pl-0"} ${
                     index % 2 === 0 ? `${locale==='fa'?"md:text-right":"md:text-left"}` : "md:col-start-2"
                   }`}
                 >

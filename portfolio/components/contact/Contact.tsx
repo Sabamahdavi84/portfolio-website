@@ -39,7 +39,7 @@ export default function Contact() {
 
       <div className="w-[90%] max-w-6xl mx-auto relative z-10 space-y-16">
         {/* heading */}
-        <div className="text-center space-y-6">
+        <div data-aos="fade-up" className="text-center space-y-6">
           <span className="block text-purple-600 dark:text-purple-400 text-sm tracking-[0.3em] font-medium uppercase">
            {t('badge')}
           </span>
@@ -56,7 +56,7 @@ export default function Contact() {
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div data-aos="fade-left" className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* left - form */}
           <form
             className="p-6 rounded-2xl bg-purple-200/50 dark:bg-purple-800/30

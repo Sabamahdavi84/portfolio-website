@@ -26,7 +26,7 @@ export default function About() {
             <div className="relative z-10 w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
                 {/* left side - text */}
-                <div className="space-y-6">
+                <div data-aos={locale === "fa" ? "fade-right" : "fade-left"} className="space-y-6">
                     <span className="block text-purple-500 dark:text-purple-400 text-sm tracking-[0.3em] font-medium">
                         {t('title')}
                     </span>
@@ -55,6 +55,9 @@ export default function About() {
                 <div className="grid grid-cols-2 gap-4">
                     {stats.map((stat, i) => (
                         <div
+                           data-aos="zoom-in-up"
+                           data-aos-delay={i * 100}
+                           data-aos-duration="600"
                             key={i}
                             className="flex flex-col items-center text-center gap-3 p-6 rounded-2xl
                             bg-purple-50 dark:bg-purple-900/20 border border-purple-200/50 dark:border-purple-700/30

@@ -82,7 +82,7 @@ export default function Project() {
       {/* content */}
       <div className="relative z-10 w-[90%] max-w-6xl mx-auto space-y-10">
         {/* heading */}
-        <div className="text-center space-y-6">
+        <div data-aos="fade-up" className="text-center space-y-6">
           <span className="block text-purple-600 dark:text-purple-400 text-sm tracking-[0.3em] font-medium uppercase">
             {t('title')}
           </span>
@@ -100,7 +100,7 @@ export default function Project() {
         </div>
 
       {/* filter */}
-        <div className="flex justify-center gap-3">
+        <div data-aos="fade-up" className="flex justify-center gap-3">
             {[
              { key: "all", label: "All" },
              { key: "frontend", label: "Frontend" },
@@ -126,6 +126,10 @@ export default function Project() {
           {filteredProjects.map((project, index) => (
             <div
               key={index}
+              data-aos={index < 3 ? "fade-right" : "fade-left"}
+  data-aos-delay={(index % 3) * 120}
+  data-aos-duration="700"
+  data-aos-once="true"
               className="
                 group rounded-2xl overflow-hidden flex flex-col
                 border border-gray-200 dark:border-gray-800
