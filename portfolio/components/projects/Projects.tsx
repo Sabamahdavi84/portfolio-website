@@ -3,6 +3,7 @@
 import { useLocale , useTranslations } from "next-intl"
 import { ImageIcon, ExternalLink } from "lucide-react"
 import { FaGithub } from "react-icons/fa";
+import { useState } from "react";
 
 const projects = [
   {
@@ -10,6 +11,7 @@ const projects = [
     description:"descproject",
     image: "/images/p1.png",
     tags: ["Next.js", "TypeScript"],
+    category: "frontend",
     liveURL: "#",
     githubURL: "https://github.com/Sabamahdavi84/portfolio-website",
   },
@@ -18,6 +20,7 @@ const projects = [
     description: "descproject1",
     image: "/images/p2+.png",
     tags: ["HTML/CSS", "JavaScript"],
+    category: "frontend",
     liveURL: "https://shoestore-site.vercel.app/",
     githubURL: "https://github.com/Sabamahdavi84/shoestore_site",
   },
@@ -26,6 +29,7 @@ const projects = [
     description: "descproject2",
     image: "/images/p3.png",
     tags: ["Python"],
+    category: "backend",
     githubURL: "https://github.com/Sabamahdavi84/simple-finance-dashboard",
   },
   {
@@ -33,6 +37,7 @@ const projects = [
     description: "descproject3",
     image: "/images/p4.jpg",
     tags: ["Python"],
+    category: "backend",
     githubURL: "https://github.com/Sabamahdavi84/weather-app",
   },
   {
@@ -40,6 +45,7 @@ const projects = [
     description: "descproject4",
     image: "/images/p5.jpg",
     tags: ["Python", "PostgreSQL"],
+    category: "backend",
     githubURL: "https://github.com/Sabamahdavi84/TODOLIST",
   },
   {
@@ -47,13 +53,22 @@ const projects = [
     description: "descproject5",
     image: "/images/p6.png",
     tags: ["PostgreSQL"],
+    category: "backend",
     githubURL: "https://github.com/Sabamahdavi84/barbershop-database",
   },
 ]
 
 export default function Project() {
   const locale = useLocale()
-  const t=useTranslations("Projects")
+  const t=useTranslations("Projects");
+  const [filter, setFilter] = useState<"all" | "frontend" | "backend">("all");
+
+  const filteredProjects =
+  filter === "all"
+    ? projects
+    : projects.filter(
+        (project) => project.category === filter
+      );
 
   return (
     <section id="projects" className="py-24 relative -mt-20 overflow-hidden">
@@ -65,7 +80,7 @@ export default function Project() {
       />
 
       {/* content */}
-      <div className="relative z-10 w-[90%] max-w-6xl mx-auto space-y-14">
+      <div className="relative z-10 w-[90%] max-w-6xl mx-auto space-y-10">
         {/* heading */}
         <div className="text-center space-y-6">
           <span className="block text-purple-600 dark:text-purple-400 text-sm tracking-[0.3em] font-medium uppercase">
@@ -84,9 +99,31 @@ export default function Project() {
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto" />
         </div>
 
+      {/* filter */}
+        <div className="flex justify-center gap-3">
+            {[
+             { key: "all", label: "All" },
+             { key: "frontend", label: "Frontend" },
+             { key: "backend", label: "Backend" },
+             ].map((item) => (
+        <button
+             key={item.key}
+             onClick={() => setFilter(item.key as any)}
+             className={`px-5 py-2 rounded-full transition-all
+            ${
+              filter === item.key
+               ? "bg-purple-600 text-white"
+               : "bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30"
+           }`}
+           >
+        {t(item.label)}
+       </button>
+       ))}
+       </div>
+
         {/* grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <div
               key={index}
               className="

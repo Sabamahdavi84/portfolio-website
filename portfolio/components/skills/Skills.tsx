@@ -8,7 +8,7 @@ import {
     LucideWrench,
 } from "lucide-react";
 
-type Skill = { name: string; level: string };
+type Skill = { name: string };
 
 const skillCategories: {
     icon: typeof LucideCode2;
@@ -21,11 +21,12 @@ const skillCategories: {
         title: "Frontend",
         description: "description",
         skills: [
-            { name: "HTML & CSS", level: "80" },
-            { name: "JavaScript & TypeScript", level: "80" },
-            { name: "React", level: "80" },
-            { name: "Next.js", level: "90" },
-            { name: "TypeScript", level: "80" },
+            { name: "HTML & CSS" },
+             { name: "Tailwind css" },
+            { name: "JavaScript" },
+            { name: "TypeScript" },
+            { name: "React" },
+            { name: "Next.js" }
         ],
     },
     {
@@ -33,11 +34,11 @@ const skillCategories: {
         title: "Backend",
         description: "api",
         skills: [
-            { name: "Node.js", level: "50" },
-            { name: "Express", level: "50" },
-            { name: "PostgreSQL", level: "80" },
-            { name: "Python", level: "80" },
-            { name: "REST APIs", level: "70" },
+            { name: "Node.js" },
+            { name: "Express" },
+            { name: "PostgreSQL" },
+            { name: "Python" },
+            { name: "REST APIs"},
         ],
     },
     {
@@ -45,11 +46,11 @@ const skillCategories: {
         title: "tools",
         description: "description1",
         skills: [
-            { name: "Git / GitHub", level: "100" },
-            { name: "Figma", level: "90" },
-            { name: "Vercel", level: "80"},
-            { name: "Jira", level: "80" },
-            { name: "Azure Devops", level: "80" },
+            { name: "Git / GitHub" },
+            { name: "Figma" },
+            { name: "Vercel"},
+            { name: "Jira" },
+            { name: "Azure Devops" },
         ],
     },
 ];
@@ -108,27 +109,16 @@ export default function Skills() {
                                 {t(category.description)}
                             </p>
 
-                            {/* skill rows */}
-                            <div className="space-y-4">
+                            {/* skill list */}
+                            <div className="flex flex-wrap gap-2">
                                 {category.skills.map((skill, j) => (
-                                    <div key={j}>
-                                        <div className="flex items-center justify-between mb-1.5">
-                                            <span className="text-sm font-medium text-gray-700 dark:text-gray-200">
-                                                {skill.name}
-                                            </span>
-                                            <span className={`${locale==='fa'? "mr-auto":"ml-auto"} text-sm text-purple-500 dark:text-purple-400 font-semibold`}>
-                                    {t(skill.level)}%
-                                </span>
-                                        </div>
-
-                                        {/* segmented level bar */}
-                                       <div className="w-full h-1.5 rounded-full bg-purple-100 dark:bg-purple-900/30 overflow-hidden">
-                                         <div
-                                           className="h-full rounded-full bg-gradient-to-r from-purple-500 to-purple-400 transition-all duration-500"
-                                           style={{ width: `${skill.level}%` }}
-                                          />
-                                        </div>
-                                    </div>
+                                    <span
+                                        key={j}
+                                        className="text-sm font-medium text-gray-700 dark:text-gray-200
+                                        bg-purple-200 dark:bg-purple-800/30 px-3 py-1.5 rounded-full"
+                                    >
+                                        {skill.name}
+                                    </span>
                                 ))}
                             </div>
                         </div>

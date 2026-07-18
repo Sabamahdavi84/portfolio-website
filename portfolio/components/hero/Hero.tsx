@@ -88,10 +88,10 @@ export default function Hero(){
                 <div className="relative flex items-center w-48 justify-center">
                     <div className="flex-1 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
                     <div className="absolute left-1/2 -translate-x-1/2">
-                        <div className="relative">
-                            <div className="absolute inset-0 w-6 h-6 rounded-full bg-purple-500/40 blur-md" />
-                            <span className="relative text-purple-400 text-sm">✦</span>
-                        </div>
+                        <div className="relative flex items-center justify-center w-6 h-6">
+                          <div className="absolute inset-0 rounded-full bg-purple-500/40 blur-md" />
+                             <span className="relative z-10 text-purple-400 text-sm leading-none">✦</span>
+                          </div>
                     </div>
                 </div>
 
