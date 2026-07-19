@@ -2,6 +2,7 @@
 
 import { LucideSend, Mail, MapPin, Phone } from "lucide-react"
 import { useLocale , useTranslations} from "next-intl";
+import { useState } from "react";
 
 const contactInfo = [
   {
@@ -27,6 +28,30 @@ const contactInfo = [
 export default function Contact() {
   const locale = useLocale();
   const t=useTranslations('Contact');
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    // بعدا اینجا EmailJS یا API را صدا می‌زنی
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    setLoading(false);
+    setSuccess(true);
+   // خالی شدن فرم
+    setForm({
+      name: "",
+      email: "",
+      message: "",
+    });
+    setTimeout(()=>{setSuccess(false)},2000)
+   };
 
   return (
     <section id="contact" className="relative py-24 overflow-hidden -mt-22">
@@ -59,6 +84,7 @@ export default function Contact() {
         <div data-aos="fade-left" className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* left - form */}
           <form
+            onSubmit={handleSubmit}
             className="p-6 rounded-2xl bg-purple-200/50 dark:bg-purple-800/30
             border border-gray-200 dark:border-purple-900 shadow-sm space-y-5"
           >
@@ -74,6 +100,10 @@ export default function Contact() {
               <input
                 type="text"
                 required
+                value={form.name}
+                onChange={(e) =>
+                setForm({ ...form, name: e.target.value })
+                }
                 placeholder={t('namePlaceholder')}
                 className="w-full px-4 py-2.5 rounded-lg
                 bg-gray-50 dark:bg-purple-700
@@ -94,6 +124,10 @@ export default function Contact() {
               <input
                 type="email"
                 required
+                value={form.email}
+                onChange={(e) =>
+                   setForm({ ...form, email: e.target.value })
+                  }
                 placeholder={t('emailPlaceholder')}
                 className="w-full px-4 py-2.5 rounded-lg
                 bg-gray-50 dark:bg-purple-700
@@ -114,6 +148,10 @@ export default function Contact() {
               <textarea
                 required
                 rows={4}
+                value={form.message}
+                onChange={(e) =>
+                setForm({ ...form, message: e.target.value })
+                }
                 placeholder={t('messagePlaceholder')}
                 className="w-full px-4 py-2.5 rounded-lg
                 bg-gray-50 dark:bg-purple-700
@@ -128,15 +166,21 @@ export default function Contact() {
 
             <button
               type="submit"
+              disabled={loading}
               className="w-full py-3 rounded-full bg-purple-500/60
               hover:bg-purple-500/80
               dark:bg-purple-500 dark:hover:bg-purple-400
               text-white font-medium transition-colors
               flex items-center justify-center gap-2 cursor-pointer"
             >
-              {t('send')}
+              {loading ? "Sending..." : t("send")}
               <LucideSend className="w-4 h-4" />
             </button>
+            {success && (
+            <p className="text-purple-600 dark:text-purple-400 text-sm ml-2 mr-2">
+              {t('success')}
+            </p>
+             )}
           </form>
 
           {/* right - contact info */}

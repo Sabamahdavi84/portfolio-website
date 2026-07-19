@@ -4,6 +4,7 @@
     "title1": "Let's build",
     "title2": "something great",
     "formTitle": "Send a message",
+    "success":"Message sent successfully!",
 
     "name": "Name",
     "namePlaceholder": "Enter your name",
