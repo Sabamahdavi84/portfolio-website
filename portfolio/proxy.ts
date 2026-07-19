@@ -2,10 +2,10 @@ import createMiddleware from 'next-intl/middleware';
 
 export default createMiddleware({
   // لیست زبان‌هایی که پشتیبانی می‌کنید
-  locales: ['en', 'fa', 'ar'],
+  locales: ['en', 'fa'],
 
   // زبان پیش‌فرض وقتی کاربر آدرس خالی می‌زند
-  defaultLocale: 'fa'
+  defaultLocale: 'en'
 });
 
 export const config = {
