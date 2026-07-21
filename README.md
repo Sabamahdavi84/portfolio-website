@@ -19,8 +19,6 @@ A modern and responsive personal portfolio built with Next.js 16, showcasing my 
 - TypeScript
 - Tailwind CSS
 - next-intl
-- Framer Motion (اگر استفاده کردی)
-- GSAP (اگر استفاده کردی)
 
 ## Getting Started
 
