@@ -10,7 +10,6 @@
   <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss" />
-  <img src="https://img.shields.io/badge/License-MIT-green" />
 </p>
 
 ---
@@ -31,14 +30,14 @@
 
 ## 🛠 Tech Stack
 
-|Category |Technologies |
-|----------|--------------|
-| Framework | Next.js 16 |
-| Library | React |
-| Language | TypeScript |
-| Styling | Tailwind CSS |
-| Internationalization | next-intl |
-| Deployment | Vercel |
+|Category|Technologies|
+|---------|--------------|
+|Framework|Next.js 16|
+|Library|React|
+|Language|TypeScript|
+|Styling|Tailwind CSS|
+|Internationalization|next-intl|
+|Deployment|Vercel|
 
 ---
 
@@ -46,10 +45,10 @@
 
 ### Home Page
 
-<p align="center">
-  <img src="./assets/mainpagedark.png" width="48%" alt="Dark Mode">
-  <img src="./assets/mainpagelight.png" width="48%" alt="Light Mode">
-</p>
+<!-- <p align="center"> -->
+  <img src="./assets/mainpagedark.png" width="40%" alt="Dark Mode">
+  <img src="./assets/mainpagelight.png" width="40%" alt="Light Mode">
+<!-- </p> -->
 
 ---
 
