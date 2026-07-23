@@ -17,7 +17,7 @@
 ## ✨ Features
 
 - 🌙 Dark & Light Theme
-- 🌍 Multi-language Support (English, Persian, Arabic)
+- 🌍 Multi-language Support (English, Persian)
 - 📱 Fully Responsive Design
 - ⚡ Built with Next.js 16 App Router
 - 🎨 Modern UI with Smooth Animations
