@@ -1,8 +1,5 @@
 # 💼 Personal Portfolio
 
-<p align="center">
-  <img src="./assets/portfolio-cover.png" alt="Portfolio Preview" width="100%">
-</p>
 
 <p align="center">
   A modern, responsive, and multilingual portfolio website built with <strong>Next.js 16</strong> to showcase my projects, technical skills, and professional experience.
@@ -34,7 +31,7 @@
 
 ## 🛠 Tech Stack
 
-| Category | Technologies |
+|Category |Technologies |
 |----------|--------------|
 | Framework | Next.js 16 |
 | Library | React |
@@ -52,12 +49,6 @@
 <p align="center">
   <img src="./assets/mainpagedark.png" width="48%" alt="Dark Mode">
   <img src="./assets/mainpagelight.png" width="48%" alt="Light Mode">
-</p>
-
-### Projects
-
-<p align="center">
-  <img src="./assets/projects.png" width="100%" alt="Projects Section">
 </p>
 
 ---
@@ -132,7 +123,7 @@ Repository
 
 **Saba Mahdavi**
 
-- 💻 GitHub: https://github.com/Sabamahdavi84
+- 💻 GitHub: https://github.com/Sabamahdavi84/portfolio-website
 - 🌐 Portfolio: https://sabamahdavi.vercel.app
 
 ---
