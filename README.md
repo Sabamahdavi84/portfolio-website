@@ -93,19 +93,14 @@ Repository
 │
 ├── README.md
 ├── assets/
-│   ├── portfolio-cover.png
-│   ├── home-dark.png
-│   ├── home-light.png
-│   └── projects.png
+│   ├── mainpagedark.png
+│   └── mainpagelight.png
 │
 └── portfolio/
     ├── app/
     ├── components/
     ├── public/
-    ├── hooks/
-    ├── lib/
-    ├── messages/
-    ├── types/
+    ├── locales/
     ├── package.json
     └── ...
 ```
