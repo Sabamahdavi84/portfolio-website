@@ -45,10 +45,10 @@
 
 ### Home Page
 
-<!-- <p align="center"> -->
-  <img src="./assets/mainpagedark.png" width="40%" alt="Dark Mode">
-  <img src="./assets/mainpagelight.png" width="40%" alt="Light Mode">
-<!-- </p> -->
+<p>
+  <img src="./assets/mainpagedark.png" width="30%" alt="Dark Mode">
+  <img src="./assets/mainpagelight.png" width="30%" alt="Light Mode">
+</p>
 
 ---
 
