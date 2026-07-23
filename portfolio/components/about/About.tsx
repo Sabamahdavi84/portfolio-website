@@ -40,15 +40,18 @@ export default function About() {
 
                     <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
                         {t('me')} <strong className="text-gray-700 dark:text-gray-200">{t('fullstack')}</strong> {t('titr2')}{" "}
-                        <strong className="text-gray-700 dark:text-gray-200">{t('language')}</strong>,
+                        <strong className="text-gray-700 dark:text-gray-200">{t('language')}</strong>
                         {t('titr3')}{" "}
                         <strong className="text-gray-700 dark:text-gray-200">{t('language1')}</strong>{" "}{t('titr4')}.
                     </p>
 
-                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
+                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed">{t('titr5')}{" "}
                        <strong className="text-gray-700 dark:text-gray-200">
-                       {t('titr5')}</strong>{" "}
-                       {t('titr6')}</p>
+                       {t('titr6')}</strong>{" "}
+                       {t('titr7')}{" "}
+                       <strong className="text-gray-700 dark:text-gray-200">
+                       {t('titr8')}</strong>{" "}{t('titr9')}
+                       </p>
                 </div>
 
                 {/* right side - stats grid */}

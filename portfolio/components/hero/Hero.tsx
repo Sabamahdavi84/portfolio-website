@@ -105,7 +105,7 @@ export default function Hero(){
 
                 <p data-aos='fade-up' data-aos-delay="200" className="text-gray-500 max-w-lg tracking-wide">
                     {t('titr')}<br/>
-                    {t('with')} <strong className="dark:text-gray-300/60 text-gray-600"> {t('titr1')}</strong> <br/>
+                    {t('with')}<br/>
                       {t('titr2')}
                 </p>
 <div 
