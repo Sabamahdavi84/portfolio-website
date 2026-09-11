@@ -80,7 +80,7 @@ export default function MobileNav({ navOpen, setNavOpen, navLinks }: MobileNavPr
                         rounded
                         variant="outline"
                         text={t('downloadbtn')}
-                        href="/documents/rezome.pdf"
+                        href="/documents/rezomenew.pdf"
                         download
                         className="!w-full !justify-center"
                     />

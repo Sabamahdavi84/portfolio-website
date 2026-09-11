@@ -76,7 +76,7 @@ export default function Navbar() {
                             rounded
                             variant="outline"
                             text={t('downloadbtn')}
-                            href="/documents/rezome.pdf"
+                            href="/documents/rezomenew.pdf"
                             download
                         />
                     </div>
