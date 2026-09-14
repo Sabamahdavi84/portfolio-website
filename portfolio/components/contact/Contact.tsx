@@ -3,6 +3,7 @@
 import { LucideSend, Mail, MapPin, Phone } from "lucide-react"
 import { useLocale , useTranslations} from "next-intl";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const contactInfo = [
   {
@@ -38,20 +39,40 @@ export default function Contact() {
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    // بعدا اینجا EmailJS یا API را صدا می‌زنی
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setLoading(false);
+  e.preventDefault();
+
+  setLoading(true);
+  setSuccess(false);
+
+  try {
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      {
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    );
+
     setSuccess(true);
-   // خالی شدن فرم
+
     setForm({
       name: "",
       email: "",
       message: "",
     });
-    setTimeout(()=>{setSuccess(false)},2000)
-   };
+
+    setTimeout(() => {
+      setSuccess(false);
+    }, 3000);
+  } catch (error) {
+    console.error("Email sending failed:", error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <section id="contact" className="relative py-24 overflow-hidden -mt-22">
