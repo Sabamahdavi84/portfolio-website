@@ -5,7 +5,7 @@ import { promises as fs } from "fs";
 import path from "path";
 // import ToastProvider from "@/components/ToastProvider";
 import type { Metadata } from "next";
-import { vazirmatn , inter } from "@/app/lib/fonts";
+import { alibaba , inter } from "@/app/lib/fonts";
 
 const titles = {
   fa: "پورتفولیو شخصی من",
@@ -53,7 +53,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
 const fontClass =
   locale === "fa"
-    ? vazirmatn.className
+    ? alibaba.className
     : inter.className;
 
   // ✅ خواندن موازی فایل‌ها

@@ -12,6 +12,15 @@ export const vazirmatn = localFont({
   ],
 });
 
+export const alibaba = localFont({
+  src: [
+    { path: "../fonts/alibaba/Alibaba-Black.woff2", weight: "900" },
+    { path: "../fonts/alibaba/Alibaba-Bold.woff2", weight: "700" },
+    { path: "../fonts/alibaba/Alibaba-Light.woff2", weight: "300" },
+    { path: "../fonts/alibaba/Alibaba-Regular.woff2", weight: "400" },
+  ],
+});
+
 export const inter = localFont({
   src: [
     { path: "../fonts/inter/Inter-Black.woff2", weight: "900" },

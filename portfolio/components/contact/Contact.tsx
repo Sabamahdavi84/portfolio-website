@@ -92,7 +92,7 @@ export default function Contact() {
 
           <h2
             className={`${
-              locale === "fa" ? "font-medium text-4xl" : "font-serif text-4xl md:text-5xl"
+              locale === "fa" ? "font-bold text-4xl" : "font-serif text-4xl md:text-5xl"
             } leading-tight text-gray-900 dark:text-gray-50`}
           >
             {t('title1')}{" "}

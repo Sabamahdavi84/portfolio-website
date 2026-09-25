@@ -29,7 +29,7 @@ export default function LanguageSwitcher() {
       <Link
         href="/en"
         className={`relative z-10 flex-1 h-full flex items-center justify-center
-                    text-[11px] font-bold rounded-full transition-colors duration-300
+                    text-[11px] font-simibold rounded-full transition-colors duration-300
                     ${!isFa ? "text-white" : "text-gray-500 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-300"}`}
       >
         {t('en')}
@@ -39,7 +39,7 @@ export default function LanguageSwitcher() {
       <Link
         href="/fa"
         className={`relative z-10 flex-1 h-full flex items-center justify-center
-                    text-[11px] font-bold rounded-full transition-colors duration-300
+                    text-[11px] font-simibold rounded-full transition-colors duration-300
                     ${isFa ? "text-white" : "text-gray-500 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-300"}`}
       >
         {t('fa')}

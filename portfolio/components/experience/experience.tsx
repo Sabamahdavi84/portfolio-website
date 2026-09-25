@@ -52,7 +52,7 @@ export default function Experience() {
 
           <h2
             className={`${
-              locale === "fa" ? "font-medium text-4xl" : "font-serif text-4xl md:text-5xl"
+              locale === "fa" ? "font-bold text-4xl" : "font-serif text-4xl md:text-5xl"
             } leading-tight text-gray-900 dark:text-gray-50`}
           >
             {t('titr1')} <br />
@@ -65,9 +65,14 @@ export default function Experience() {
         {/* timeline */}
         <div className="relative mt-14 max-w-5xl mx-auto px-6">
           <div
-            className={`absolute top-0 bottom-0 w-0.5 ${locale==="fa" ?"md:right-1/2 right-11 ":"md:left-1/2 left-11"}
-            bg-gradient-to-b from-purple-400 via-purple-300 to-transparent md:-translate-x-1/2`}
-          />
+          className={`absolute top-0 bottom-0 w-0.5
+            bg-gradient-to-b from-purple-400 via-purple-300 to-transparent
+             ${
+               locale === "fa"
+                ? "right-7 md:right-1/2 md:translate-x-1/2"
+                : "left-7 md:left-1/2 md:-translate-x-1/2"
+              }`}
+            />
 
           <div className="space-y-12">
             {experience.map((exp, index) => (
@@ -77,11 +82,15 @@ export default function Experience() {
                key={index} className="relative grid md:grid-cols-2 gap-8">
                 {/* dot */}
                 <div
-                  className={`absolute ${locale==="fa" ? "right-2 md:right-1/2 ":"left-5 md:left-1/2"}  top-0 w-3 h-3 bg-purple-500 rounded-full
-                  -translate-x-1/2 ring-4 ring-purple-200 dark:ring-purple-900 z-10`}
-                >
-                  <span className="absolute inset-0 rounded-full bg-purple-400 animate-ping opacity-75" />
-                </div>
+                  className={`absolute top-0 w-3 h-3 bg-purple-500 rounded-full ring-4 ring-purple-200 dark:ring-purple-900 z-10
+                  ${
+                  locale === "fa"
+                     ? "md:right-1/2 md:translate-x-1/2"
+                     : "md:left-1/2 md:-translate-x-1/2"
+                  }`}
+                  >
+               <span className="absolute inset-0 rounded-full bg-purple-400 animate-ping opacity-75" />
+              </div>
 
                 {/* content */}
                 <div

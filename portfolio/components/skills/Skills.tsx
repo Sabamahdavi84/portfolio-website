@@ -77,7 +77,7 @@ export default function Skills() {
                         {t('skill')}
                     </span>
 
-                    <h2 className={`${locale==='fa' ? "font-medium text-4xl" : "font-serif text-4xl md:text-5xl"} leading-tight text-gray-800 dark:text-gray-100`}>
+                    <h2 className={`${locale==='fa' ? "font-bold text-4xl" : "font-serif text-4xl md:text-5xl"} leading-tight text-gray-800 dark:text-gray-100`}>
                         {t('tooling')} <br />
                         <span className="text-purple-500 dark:text-purple-400 pt-2 block">{t('ideas')}</span>
                     </h2>

@@ -112,8 +112,8 @@ export default function Hero() {
             className={`leading-[1.05] text-gray-800 dark:text-gray-100
               ${
                 locale === "fa"
-                  ? "font-medium text-4xl md:text-5xl"
-                  : "font-serif text-6xl md:text-7xl"
+                  ? "font-bold text-4xl leading-[1.3] md:text-5xl md:leading-[1.3]"
+                  : "font-serif text-6xl md:text-7xl leading-[1.05]"
               }
             `}
           >
@@ -123,7 +123,7 @@ export default function Hero() {
               className={`
                 ${
                   locale === "fa"
-                    ? "text-5xl md:text-6xl pt-4 block"
+                    ? "block pt-4 text-5xl leading-[1.3] md:text-6xl md:leading-[1.3]"
                     : "text-6xl md:text-7xl"
                 }
                 bg-linear-to-r from-purple-600 via-purple-400 to-gray-400 dark:from-purple-500 dark:via-violet-400 dark:to-purple-200
@@ -139,7 +139,7 @@ export default function Hero() {
             data-aos-delay="100"
             className="inline-flex items-center px-5 py-2 rounded-full text-purple-500 dark:text-purple-400 text-sm
             border border-purple-500/40 bg-purple-500/5 backdrop-blur-sm shadow-[0_0_25px_rgba(124,58,237,0.10)]">
-            <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mr-2 animate-pulse" />
+              <span className={`w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse ${locale==="fa"  ? "ml-2" :" mr-2"}`} />
 
             {t("title")}
           </span>
