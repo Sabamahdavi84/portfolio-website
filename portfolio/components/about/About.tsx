@@ -36,7 +36,7 @@ export default function About() {
                         <span className="text-purple-500 dark:text-purple-400">{t('titr1')}</span>
                     </h2>
 
-                    <div className="w-24 h-px bg-gradient-to-r from-purple-500 to-transparent" />
+                    <div className="w-24 h-px bg-linear-to-r from-purple-500 to-transparent" />
 
                     <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
                         {t('me')} <strong className="text-gray-700 dark:text-gray-200">{t('fullstack')}</strong> {t('titr2')}{" "}
